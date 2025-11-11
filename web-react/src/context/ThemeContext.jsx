@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import {createContext, useContext, useMemo, useState} from 'react';
 
 const ThemeContext = createContext(null);
@@ -15,7 +16,6 @@ export function ThemeProvider({children, initial = 'light'}) {
     );
 }
 
-// eslint-disable-next-line react-refresh/only-export-components
 export function useTheme() {
     const ctx = useContext(ThemeContext);
     if (!ctx) throw new Error('useTheme повинна використовуватися тільки всередині ThemeProvider');
